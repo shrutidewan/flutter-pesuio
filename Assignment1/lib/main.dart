@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
@@ -90,14 +90,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     fontSize: 30.0,
                     fontFamily: 'Inter',
                     color: Colors.white,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ),
             Image.asset(
-              'assets/images/cat.png',
-              height: 200.0,
-              width: 200.0,
+              'assets/images/cat2.gif',
+              width: 300.0,
             ),
             const Text(
               'Shruti Dewan',
