@@ -70,54 +70,76 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              'PESU',
-              style: TextStyle(fontSize: 36.0, fontFamily: 'Inter', color: Colors.blue, ),
+            Container(
+              width: double.infinity,
+              color: Colors.blueGrey.shade900,
+              padding: const EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 0.0,
+              ),
+              child: const Center(
+                child: Text(
+                  'PESU',
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    fontFamily: 'Inter',
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ),
             Image.asset(
-              'assets/images/cat.jpg',
+              'assets/images/cat.png',
               height: 200.0,
               width: 200.0,
             ),
-            Text(
-                'Janani',
-                style: TextStyle(
-                  fontSize: 26.0,
-                  color: Color(0xff80489C),
-                  fontFamily: 'Inter',
-                )
-
+            const Text(
+              'Shruti Dewan',
+              style: TextStyle(
+                fontSize: 28.0,
+                color: Color(0xffFFFFFF),
+                fontFamily: 'Inter',
+              ),
             ),
-            Text(
-                'PES2UG21CS455',
-                style: TextStyle(
-                  fontSize: 26.0,
-                  color: Color(0xff80489C),
-                  fontFamily: 'Inter',
-                )
+            const Text(
+              'PES2UG21CS515',
+              style: TextStyle(
+                fontSize: 28.0,
+                color: Color(0xffFFFFFF),
+                fontFamily: 'Inter',
+              ),
             ),
-            Text(
-                '9972355302',
-                style: TextStyle(
-                  fontSize: 26.0,
-                  color: Color(0xff80489C),
-                  fontFamily: 'Inter',
-                )
+            const Text(
+              '8867010018',
+              style: TextStyle(
+                fontSize: 28.0,
+                color: Color(0xffFFFFFF),
+                fontFamily: 'Inter',
+              ),
             ),
             ElevatedButton(
-              onPressed: (){
+              onPressed: () {
                 print('Present');
               },
-              style: ElevatedButton.styleFrom(
-                primary: Colors.green,
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                  Colors.blueGrey.shade900,
+                ),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    side: BorderSide(color: Colors.blueGrey.shade800),
+                  ),
+                ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
+              child: const Padding(
+                padding: EdgeInsets.all(20.0),
                 child: Text('Present'),
               ),
             ),
